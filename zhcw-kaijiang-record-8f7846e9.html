@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>彩票开奖 · 站点介绍与可信说明</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #fce8d0 0%, #fdebcd 35%, #f7dbb5 70%, #f4ce9e 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2rem 1.2rem;
+    }
+    .page-wrapper {
+      max-width: 1240px;
+      width: 100%;
+      background: rgba(255, 245, 235, 0.45);
+      backdrop-filter: blur(1px);
+      border-radius: 3.2rem 3.2rem 2.8rem 2.8rem;
+      padding: 2.6rem 2rem 3rem;
+      box-shadow: 0 18px 40px -10px rgba(170, 100, 40, 0.2);
+    }
+    /* 目录感布局 – 网格卡片 */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem 1.6rem;
+      margin: 2.2rem 0 1.6rem;
+    }
+    .card {
+      background: #fffffffb;
+      border-radius: 2.2rem;
+      padding: 1.8rem 1.6rem 2rem;
+      box-shadow: 0 6px 16px rgba(150, 80, 30, 0.07), 0 2px 6px rgba(0,0,0,0.02);
+      backdrop-filter: blur(2px);
+      transition: transform 0.15s ease, box-shadow 0.25s ease;
+      border: 1px solid rgba(255, 220, 180, 0.2);
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px -6px rgba(160, 90, 40, 0.12);
+    }
+    .card-icon {
+      font-size: 1.8rem;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      background: rgba(245, 190, 140, 0.2);
+      width: 2.8rem;
+      height: 2.8rem;
+      line-height: 2.8rem;
+      text-align: center;
+      border-radius: 60%;
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #5b3a1e;
+      margin-bottom: 0.6rem;
+    }
+    .card p, .card li {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #3f2c16;
+    }
+    .card ul {
+      padding-left: 1.2rem;
+      margin-top: 0.3rem;
+    }
+    .card ul li {
+      margin-bottom: 0.3rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #f5dbb0;
+      color: #4d301a;
+      border-radius: 36px;
+      padding: 0 0.9rem;
+      height: 2rem;
+      line-height: 2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-right: 0.4rem;
+      white-space: nowrap;
+    }
+    .hero-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid rgba(180, 120, 70, 0.12);
+      padding-bottom: 1.2rem;
+    }
+    .hero-txt h1 {
+      font-size: 2.4rem;
+      font-weight: 650;
+      color: #3f2a12;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    .hero-txt .subhead {
+      font-size: 1.1rem;
+      margin-top: 0.25rem;
+      color: #654a2b;
+      font-weight: 400;
+    }
+    .hero-tagline {
+      background: rgba(100, 70, 40, 0.06);
+      padding: 0.3rem 1.2rem;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      color: #4f3a21;
+      margin-top: 0.6rem;
+      display: inline-block;
+    }
+    .meta-badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.6rem;
+      margin: 0.6rem 0 0.4rem;
+    }
+    .info-strip {
+      background: #f9eee2;
+      border-radius: 3rem;
+      padding: 1rem 1.8rem;
+      margin: 1.8rem 0 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.2rem 2rem;
+      border: 1px solid #edcfb0;
+    }
+    .info-strip span {
+      font-size: 0.95rem;
+      color: #3b2816;
+    }
+    .info-strip .dot {
+      display: inline-block;
+      width: 10px; height: 10px;
+      background: #c29160;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+    .link-button {
+      background: #ffffff;
+      border-radius: 80px;
+      padding: 0.3rem 1.3rem 0.3rem 1rem;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #dabb93;
+      transition: background 0.2s, border-color 0.15s;
+      font-size: 0.95rem;
+      color: #3e2a16;
+      text-decoration: none;
+      line-height: 2;
+    }
+    .link-button:hover {
+      background: #f9ebdb;
+      border-color: #b18657;
+    }
+    .faq-mini {
+      background: #fffcf7;
+      border-radius: 2.4rem;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0 1.2rem;
+      border: 1px solid #f0d7be;
+    }
+    .faq-mini summary {
+      font-weight: 600;
+      color: #3f2a13;
+      padding: 0.4rem 0;
+      cursor: default;
+      font-size: 1.1rem;
+    }
+    .faq-mini p {
+      margin-top: 0.5rem;
+      color: #4c3620;
+    }
+    .footer-note {
+      text-align: center;
+      margin-top: 2.2rem;
+      opacity: 0.7;
+      font-size: 0.85rem;
+      color: #4b321b;
+      border-top: 1px dashed #dbbc9b;
+      padding-top: 1.6rem;
+    }
+    .footer-note a {
+      color: #6d4b27;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    @media (max-width: 800px) {
+      .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+      .hero-txt h1 { font-size: 2rem; }
+      body { padding: 1.2rem; }
+      .page-wrapper { padding: 1.6rem 1.2rem; }
+    }
+    @media (max-width: 520px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .info-strip { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .hero-area { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- hero 区域 / 站点说明 -->
+  <div class="hero-area">
+    <div class="hero-txt">
+      <h1>📋 开奖信息 · 知识库</h1>
+      <div class="subhead">站点介绍与可信说明 · 聚焦数据透明度</div>
+      <div class="meta-badge-group">
+        <span class="badge">🎯 开奖号码</span>
+        <span class="badge">📅 历史对比</span>
+        <span class="badge">🧩 玩法说明</span>
+        <span class="badge">⚖️ 合规提示</span>
+      </div>
+    </div>
+    <div class="hero-tagline">
+      ⏳ 数据交叉核对 · 每日更新
+    </div>
+  </div>
+
+  <!-- 4 个目录式卡片：说明区、特点、场景、信息区 -->
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-icon">📘</div>
+      <h3>站点说明</h3>
+      <p>本索引页围绕 <a href="https://zhcw-kaijiang.com" style="color:#7d5d39; font-weight:500; text-decoration:underline;">彩票开奖</a> 站点的公开内容进行归纳整理，提供开奖号码、频率统计与玩法基础信息，方便使用者快速定位所需板块。所有数据来源均指向官方发布渠道，本站仅作为信息聚合与导航。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔍</div>
+      <h3>可信说明</h3>
+      <ul>
+        <li>开奖结果取自合规授权机构，延迟控制在分钟级；</li>
+        <li>页面嵌入日期校验与版本标记，便于追溯；</li>
+        <li>无用户注册、无诱导分享、无付费内容；</li>
+        <li>所有超链接均指向确定的<a href="https://zhcw-kaijiang.com" style="color:#7d5d39; font-weight:500;">彩票开奖</a>页面或相关解释页。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-icon">🧩</div>
+      <h3>特点一览</h3>
+      <ul>
+        <li>多期开奖号码并列对比，支持高频彩与数字彩；</li>
+        <li>精简界面，减少视觉干扰，突出号码与奖级；</li>
+        <li>提供冷热号区间参考（非预测，仅统计）；</li>
+        <li>移动端适配良好，开奖表格可横向滚动。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-icon">📂</div>
+      <h3>相关信息区</h3>
+      <p>玩法规则摘要、兑奖期限说明、公证机构备注、历史返奖率趋势。以下 FAQ 摘要亦属此区。更多细则可在对应栏目内展开。</p>
+      <p style="margin-top: 0.8rem;"><span class="badge" style="background:#ebd2b8;">📌 开奖直播</span> <span class="badge" style="background:#ebd2b8;">🧾 派奖公告</span></p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📌</div>
+      <h3>适用场景</h3>
+      <ul>
+        <li>购彩后快速核对当期中奖号码；</li>
+        <li>研究历史开出频率（个人兴趣向）；</li>
+        <li>作为信息索引入口，配合其他公开数据使用；</li>
+        <li>了解不同彩种的基础结构与开奖节奏。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-icon">💡</div>
+      <h3>提示区</h3>
+      <p>• 本站不提供投注、代购或预测服务；<br>• 开奖信息仅供参考，以官方公告为准；<br>• 请理性对待开奖结果，合理安排时间与资金；<br>• 未成年人不得购买彩票和兑奖。</p>
+    </div>
+  </div>
+
+  <!-- 信息提示条 -->
+  <div class="info-strip">
+    <span><span class="dot"></span> 最新更新：2025-03-25 · 第 2025034 期</span>
+    <span><span class="dot"></span> 覆盖彩种：双色球 / 大乐透 / 3D / 排列三 / 七乐彩</span>
+    <span><span class="dot"></span> 数据核对：信息聚合，交叉验证</span>
+  </div>
+
+  <!-- FAQ 摘要 + 嵌入式链接 -->
+  <div class="faq-mini">
+    <details open>
+      <summary>❓ FAQ 摘要 – 关于本站与开奖数据</summary>
+      <p><strong>Q：这里的开奖结果更新速度如何？</strong> A：通常在官方公布后 10-20 分钟内同步，遇网络延迟或系统维护可能稍有滞后。建议以<a href="https://zhcw-kaijiang.com" style="color:#7d5d39; font-weight:500;">彩票开奖</a>实时页面为准。</p>
+      <p style="margin-top: 0.8rem;"><strong>Q：是否保留历史期次数据？</strong> A：保留近 60 期开奖号码与奖级明细，更早数据可借助筛选功能检索。</p>
+      <p style="margin-top: 0.8rem;"><strong>Q：手机浏览效果如何？</strong> A：页面已适配常用移动设备，表格支持手势滚动，字体与按钮均适配触摸操作。</p>
+      <p style="margin-top: 0.8rem;"><strong>Q：数据会不会出错？</strong> A：我们会对每期结果进行格式校验与二次比对，但最终请以发行机构盖章公告为准。如发现异常可联系维护团队复核。</p>
+    </details>
+  </div>
+
+  <!-- 站点再次说明 + 结构提示 -->
+  <div style="background: #fffcf4; border-radius: 2rem; padding: 1.2rem 1.8rem; margin: 1rem 0 0.2rem; border: 1px solid #edd5b9;">
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 1.8rem;">
+      <span style="font-weight: 600; color: #3b2816;">📇 目录索引</span>
+      <span style="color: #4e3920;">说明区 &nbsp;·&nbsp; 可信说明 &nbsp;·&nbsp; 特点 &nbsp;·&nbsp; 场景 &nbsp;·&nbsp; 提示 &nbsp;·&nbsp; FAQ</span>
+      <span style="margin-left: auto; font-size: 0.9rem; background: #f5e0cb; padding: 0.15rem 1rem; border-radius: 40px;">版本 v1.2 · 知识库布局</span>
+    </div>
+    <p style="margin-top: 0.8rem; color: #413019; font-size: 0.96rem;">本介绍页作为 <a href="https://zhcw-kaijiang.com" style="font-weight: 600; color: #6f4e2a;">彩票开奖</a> 的辅助入口，不储存任何投注功能，仅聚合公共信息。所有内容均遵守相关法律法规，倡导理性对待彩票。</p>
+  </div>
+
+  <div class="footer-note">
+    <span>基于公开数据整理 · </span>
+    <a href="https://zhcw-kaijiang.com">彩票开奖</a>
+    <span> · 仅供信息参考，不构成任何建议</span>
+    <span style="display: block; margin-top: 0.3rem; opacity: 0.5;">&copy; 索引页 · 非官方平台</span>
+  </div>
+</div>
+</body>
+</html>
