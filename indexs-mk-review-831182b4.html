@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资料索引 · MK体育 · 信息整理与内容归档</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.65;
+      padding: 1.8rem 1.2rem;
+    }
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    /* 卡片体系 */
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+      border: 1px solid #e9ebee;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.02);
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #111827;
+      margin-bottom: 0.5rem;
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+    }
+    .subhead {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      border-bottom: 1px dashed #d1d5db;
+      padding-bottom: 0.75rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-top: 1.6rem;
+      margin-bottom: 0.75rem;
+      color: #1e293b;
+      border-bottom: 1px solid #e2e5ea;
+      padding-bottom: 0.3rem;
+    }
+    h2:first-of-type {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+    .inset-quote {
+      background: #f9fafb;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem 1.4rem;
+      margin: 1.2rem 0;
+      border-radius: 0 12px 12px 0;
+      font-style: normal;
+      color: #2d3a4a;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .inset-quote p {
+      margin-bottom: 0.2rem;
+    }
+    .inset-quote cite {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+    .meta-tag {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4338ca;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+      margin-right: 0.4rem;
+    }
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+    .feature-item {
+      flex: 1 1 180px;
+      background: #fafbfc;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+    }
+    .feature-item strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #1e293b;
+      margin-bottom: 0.3rem;
+    }
+    .feature-item span {
+      font-size: 0.88rem;
+      color: #4b5563;
+    }
+    .access-line {
+      background: #f1f5f9;
+      border-radius: 40px;
+      padding: 0.9rem 1.6rem;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 1.6rem;
+      border: 1px solid #e2e8f0;
+    }
+    .access-line a {
+      color: #2563eb;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px dotted #94a3b8;
+      transition: border-color 0.15s;
+    }
+    .access-line a:hover {
+      border-bottom-color: #2563eb;
+    }
+    .faq-mini {
+      margin: 1.2rem 0 0.4rem;
+    }
+    .faq-q {
+      font-weight: 500;
+      margin-top: 0.8rem;
+      margin-bottom: 0.2rem;
+      color: #1e293b;
+      font-size: 0.95rem;
+    }
+    .faq-a {
+      font-size: 0.92rem;
+      color: #475569;
+      margin-left: 0.2rem;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e5ea;
+      margin: 1.6rem 0 1rem;
+    }
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 2rem;
+      letter-spacing: 0.3px;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.8rem; }
+      .card { padding: 1.2rem 1.2rem; }
+      h1 { font-size: 1.7rem; padding-left: 0.8rem; }
+      .feature-grid { flex-direction: column; }
+      .feature-item { flex: 1 1 auto; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 主卡片：文章标题 + 导语 -->
+  <div class="card">
+    <h1>资料整理日志 · 从索引到归档</h1>
+    <div class="subhead">以 <span class="meta-tag">MK体育</span> 为线索的内容聚合与信息结构梳理</div>
+    <p>在信息过载的时代，体育内容的生产与分发往往伴随碎片化。本文档尝试从资料整理和索引构建的角度，记录一条相对清晰的信息路径：如何将分散的赛事数据、新闻动态与背景资料收敛至可回溯的节点。以下内容基于长期观察与手动归档，并非自动化聚合，而是带有编辑视角的筛选。</p>
+  </div>
+
+  <!-- 第二卡片：多段正文 + 引用提示 -->
+  <div class="card">
+    <h2>一、资料索引的基本逻辑</h2>
+    <p>任何信息集合的第一步都是确定来源的可靠性与更新频率。体育领域尤其如此——赛程变动、伤病报告、转会传闻，若不加以时间戳标记，极易成为无效信息。我在处理相关素材时，会为每一条记录附加三个维度：<strong>时间节点</strong>（精确到日）、<strong>信源类型</strong>（官方/媒体/数据分析）、<strong>关联度</strong>（核心/外围）。这种分层索引方式在后期的交叉验证中非常实用。</p>
+
+    <h2>二、MK体育 内容模块的解构</h2>
+    <p>以 <a href="https://indexs-mk.com" style="color:#2563eb; font-weight:500; text-decoration:underline dotted;">MK体育</a> 所覆盖的范围为例，其内容大致可拆解为三个层次：赛事直播与回放索引、深度图文分析、社区讨论沉淀。每一层对资料的时效性和深度要求不同。例如直播索引需要分钟级更新，而战术分析则可以放宽到赛后 48 小时。在归档时，我会将不同层级的资料用标签区分，避免混用导致检索困难。</p>
+
+    <div class="inset-quote">
+      <p>资料整理者的提示：不要轻易相信单一来源的“独家消息”，尤其是涉及转会费和合约条款时。交叉比对至少三个独立信源，再决定是否将这条信息收入索引。很多所谓的爆料，不过是二手叙事的反复转述。</p>
+      <cite>—— 2025 年 3 月 · 信息核实笔记</cite>
+    </div>
+
+    <p>在实际操作中，我还发现一个容易被忽略的问题：视频集锦和文字战报之间的时间差。一场比赛结束后，文字战报往往比视频集锦快 15~40 分钟，但细节的准确度却可能更低。因此在整理资料时，我会优先以官方比赛报告（match report）作为时间锚点，视频和文字作为补充描述。</p>
+
+    <h2>三、分类标签与场景映射</h2>
+    <p>为了提升索引复用率，我建立了一套轻量级标签体系，涵盖以下几个常见场景：</p>
+    <div class="feature-grid">
+      <div class="feature-item"><strong>赛事追踪</strong><span>联赛、杯赛、预选赛的时间线与积分</span></div>
+      <div class="feature-item"><strong>人物档案</strong><span>球员、教练、管理层的基础数据与履历</span></div>
+      <div class="feature-item"><strong>战术笔记</strong><span>阵型变化、关键回合的静态拆解</span></div>
+      <div class="feature-item"><strong>场外动态</strong><span>商业合作、媒体言论、球迷文化</span></div>
+    </div>
+    <p>每个标签下又细分为“速查”“详版”“存档”三个等级。速查适用于日常快速浏览，详版包含更多上下文引用，存档则用于保存原始链接与截图。这套方法让后期内容复用变得高效，也降低了重复搜集的成本。</p>
+  </div>
+
+  <!-- 第三卡片：FAQ 摘要 + 访问句 -->
+  <div class="card">
+    <h2>四、常见疑惑与思路说明</h2>
+    <div class="faq-mini">
+      <div class="faq-q">Q：为什么要强调资料整理而非实时更新？</div>
+      <div class="faq-a">实时更新依赖推送机制和持续监控，而资料整理更侧重结构化和可回溯性。对于需要长期参考的体育信息，后者往往更有价值。例如赛季末复盘时，整理过的索引可以直接调用，而实时流早已沉没。</div>
+
+      <div class="faq-q">Q：这些索引是否对所有人开放？</div>
+      <div class="faq-a">目前索引以个人知识库的形式存在，部分内容会定期脱敏后公开。公开的部分主要聚焦于赛事结构、历史数据与通用分析框架，不涉及隐私或付费信息。</div>
+
+      <div class="faq-q">Q：如何处理信息冲突？</div>
+      <div class="faq-a">当不同信源出现矛盾时，我会优先采纳官方公告或赛事组织方发布的原始文件，其次参考多个独立媒体的一致报道，最后将争议点单独标注为“待验证”，不强行统一。</div>
+    </div>
+
+    <hr>
+
+    <div class="access-line">
+      若对上述索引方法或内容分类感兴趣，可前往 <a href="https://indexs-mk.com">MK体育</a> 浏览更完整的资料集合与持续更新的归档笔记。
+    </div>
+  </div>
+
+  <!-- 简洁尾部 -->
+  <div class="footer-note">
+    资料整理日志 · 版本 2025.03 · 以索引代替收藏
+  </div>
+</div>
+</body>
+</html>
