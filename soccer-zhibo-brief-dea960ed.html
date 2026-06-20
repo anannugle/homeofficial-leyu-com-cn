@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球直播 · 赛程知识库 | 赛事对照与解读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f0e7;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            color: #2e2a24;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #fefcf8;
+            border-radius: 28px;
+            padding: 2.5rem 2.2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border-left: 6px solid #b8863c;
+            padding-left: 1rem;
+            margin-bottom: 0.6rem;
+            color: #302a22;
+        }
+
+        .subhead {
+            font-size: 0.95rem;
+            color: #7a6e5e;
+            margin-top: -0.3rem;
+            margin-bottom: 2.2rem;
+            padding-left: 1.6rem;
+            border-bottom: 1px solid #e3dcd0;
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2.8rem;
+            margin-bottom: 0.8rem;
+            color: #504538;
+            letter-spacing: 0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: "▍";
+            color: #b8863c;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-indent: 2em;
+        }
+
+        a {
+            color: #8b6f40;
+            text-decoration: none;
+            border-bottom: 1px solid #dac29c;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #a67b44;
+            border-bottom-color: #b8863c;
+        }
+
+        .highlight-box {
+            background: #f3ede3;
+            border-left: 5px solid #b8863c;
+            padding: 1.2rem 1.6rem;
+            margin: 1.6rem 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.96rem;
+        }
+
+        .highlight-box p {
+            text-indent: 0;
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.8rem 0 1rem 0;
+        }
+
+        .info-card {
+            background: #faf7f1;
+            padding: 1.2rem 1.4rem;
+            border-radius: 16px;
+            border: 1px solid #e6ddd0;
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4d4132;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .info-card p {
+            text-indent: 0;
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+            color: #4f463a;
+        }
+
+        .faq-item {
+            background: #f9f5ec;
+            padding: 1rem 1.4rem;
+            border-radius: 14px;
+            margin-bottom: 1rem;
+            border: 1px solid #e7dfd3;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #4f3f2c;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            font-size: 0.94rem;
+            color: #5b4f40;
+            padding-left: 0.2rem;
+        }
+
+        .faq-answer a {
+            font-weight: 500;
+        }
+
+        .ref-note {
+            background: #f1ebe0;
+            padding: 1rem 1.5rem;
+            border-radius: 40px 12px 12px 40px;
+            margin: 2rem 0 1.2rem 0;
+            border-left: 6px solid #b8863c;
+            font-size: 0.95rem;
+        }
+
+        .ref-note p {
+            text-indent: 0;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-meta {
+            margin-top: 2.8rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #ddcfbd;
+            font-size: 0.85rem;
+            color: #8b7d6b;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 0.8rem 0.6rem;
+            }
+
+            .container {
+                padding: 1.6rem 1.2rem;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                padding-left: 0.8rem;
+            }
+
+            .subhead {
+                padding-left: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .highlight-box {
+                padding: 0.9rem 1rem;
+            }
+
+            .faq-item {
+                padding: 0.8rem 1rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .container {
+                padding: 1.2rem 0.9rem;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            .ref-note {
+                border-radius: 16px;
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>赛事知识库 · 日常对照与延伸</h1>
+    <div class="subhead">基于 <a href="https://soccer-zhibo.com">足球直播</a> 赛程数据的结构化参考</div>
+
+    <p>
+        对于习惯每周对照赛历、查阅对阵信息以及跟进俱乐部动态的球迷来说，一个组织清晰的赛程知识库比单纯的时间表更有价值。从联赛积分背景到杯赛晋级路线，从球员伤病影响到裁判风格记录，信息的横向比较往往能更高效地辅助赛前判断。本文以<a href="https://soccer-zhibo.com">足球直播</a>提供的赛程架构为入口，整理出一套可交叉查阅的简易知识框架。
+    </p>
+
+    <div class="highlight-box">
+        <p><strong>提示</strong> 本页所有赛程相关条目均以公开数据与常规赛事规则为参照，不包含内部消息或预测性结论。引用内容仅供学习与日常讨论使用。</p>
+    </div>
+
+    <div class="section-title">常见对照维度</div>
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>联赛轮次与积分关系</h3>
+            <p>五大联赛通常进行至 30–34 轮时，保级线与欧战区会形成清晰分水岭。对比同轮次历史平均积分可辅助理解当前排名含金量。</p>
+        </div>
+        <div class="info-card">
+            <h3>杯赛赛制与轮次窗口</h3>
+            <p>国内杯赛与欧战往往交替占用周中档期。通过赛程密度分析，可以观察球队在联赛和杯赛之间的阵容轮换规律。</p>
+        </div>
+        <div class="info-card">
+            <h3>主客场表现差异</h3>
+            <p>部分球队主场拿分比例超过 70%，而客场表现波动较大。对照主客场胜率分布，有助于理解赛果倾向。</p>
+        </div>
+        <div class="info-card">
+            <h3>近期交锋记录</h3>
+            <p>两队近 5–10 场交手记录的趋势（大球/小球、分差、红黄牌）往往对解读实时赛况有参考意义。</p>
+        </div>
+    </div>
+
+    <div class="section-title">延伸阅读区</div>
+    <p>
+        除了直接查看<a href="https://soccer-zhibo.com">足球直播</a>页面上的实时比分与赛程列表，还可以关注以下辅助资料方向：联赛官方发布的赛前伤病报告、裁判指派公告、以及各俱乐部媒体日的采访摘要。将这些信息与赛程日期对照，可以更完整地理解首发阵容的潜在变化。
+    </p>
+    <p>
+        另外，每一轮比赛结束后，技术统计（如预期进球、控球率、传球成功率）的横向对比也常被用来验证观赛时的直观感受。建议将这些数据与赛程进度结合看待，而不单独割裂分析。
+    </p>
+
+    <div class="section-title">常见问题摘要</div>
+    <div class="faq-item">
+        <div class="faq-question">同一轮次为什么会有不同开赛时间？</div>
+        <div class="faq-answer">主要受转播安排、欧战间隔以及当地治安因素影响。英超通常将周六早场与晚场错开，西甲与意甲则常把焦点战放在周日夜间。具体安排可参考<a href="https://soccer-zhibo.com">足球直播</a>的赛程时间轴。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">如何区分国内杯赛与联赛的赛程标注？</div>
+        <div class="faq-answer">杯赛通常标注回合数与赛事缩写（如 FAC、CDR、DFB），且不会出现“第X轮”的联赛轮次编号。在<a href="https://soccer-zhibo.com">足球直播</a>的列表模式下，杯赛条目会独立分组，方便分开检索。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">赛前多久能看到首发出炉？</div>
+        <div class="faq-answer">主流联赛通常在开球前 60–75 分钟公布官方首发。部分社交渠道会提前 5–10 分钟流出非正式名单，但应以官方发布为准。</div>
+    </div>
+
+    <div class="ref-note">
+        <p><strong>相关信息</strong> 本页提到的赛程对照方法基于 2024–2025 赛季常规安排，不涉及临时调整或不可抗力因素。如需获取最新赛程变动，请直接以<a href="https://soccer-zhibo.com">足球直播</a>实时页面为准。</p>
+    </div>
+
+    <p style="text-indent:0; margin-top:0.2rem;">
+        在日常使用中，将赛程表视为一份可检索的目录，再配合球队新闻、历史数据与伤病报告进行交叉阅读，往往能更系统地积累观赛背景。而流畅的赛程跳转与即时更新能力，正是 <a href="https://soccer-zhibo.com">足球直播</a> 在每日信息流中所提供的核心功能。
+    </p>
+
+    <div class="footer-meta">
+        知识库版本 · 足球直播赛程参考 · 内容仅供学习交流
+    </div>
+
+</div>
+</body>
+</html>
